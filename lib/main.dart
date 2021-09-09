@@ -73,13 +73,15 @@ class _MyAppState extends State<MyApp> {
                         Icons.sort,
                         color: Colors.pink,
                       ),
-                      Text('Sort By Categories'),
+                      Text('Sort By Categories',
+                          style: TextStyle(color: Colors.pink)),
                     ],
                   ),
                   Column(
                     children: <Widget>[
                       Icon(Icons.sort_by_alpha, color: Colors.pink),
-                      Text('Shop By Brand')
+                      Text('Shop By Brand',
+                          style: TextStyle(color: Colors.pink)),
                     ],
                   )
                 ],
@@ -105,40 +107,80 @@ class _MyAppState extends State<MyApp> {
                       AssetImage("assets/images/promo_mobile_banner_121.jpg"),
                   fit: BoxFit.fill),
             ),
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                Container(
-                    margin: EdgeInsets.only(top: 15),
-                    child: OutlinedButton.icon(
-                      onPressed: () {
-                        // Respond to button press
-                      },
-                      icon: Icon(Icons.shop, size: 18),
-                      label: Text("Promotions"),
-                    )),
-                Container(
-                  margin: EdgeInsets.only(top: 15),
-                  child: OutlinedButton.icon(
-                    onPressed: () {
-                      // Respond to button press
-                    },
-                    icon: Icon(Icons.new_releases, size: 18),
-                    label: Text("New Arrival"),
+            Container(
+              height: 50,
+              width: 500,
+              margin: EdgeInsets.only(left: 10, right: 10, top: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Row(
+                    children: <Widget>[
+                      OutlinedButton.icon(
+                        onPressed: () {
+                          // Respond to button press
+                        },
+                        icon: Icon(Icons.shop, color: Colors.pink, size: 18),
+                        label: Text("Promotions"),
+                        style: OutlinedButton.styleFrom(
+                          primary: Colors.pink,
+                          backgroundColor: Colors.white,
+                          shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                          ),
+                          textStyle: TextStyle(fontSize: 12),
+                          shadowColor: Colors.grey,
+                          elevation: 5,
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(top: 15),
-                  child: OutlinedButton.icon(
-                    onPressed: () {
-                      // Respond to button press
-                    },
-                    icon: Icon(Icons.thumb_up, size: 18),
-                    label: Text("Best Seller"),
+                  Row(
+                    children: <Widget>[
+                      OutlinedButton.icon(
+                        onPressed: () {
+                          // Respond to button press
+                        },
+                        icon: Icon(Icons.new_releases,
+                            color: Colors.pink, size: 18),
+                        label: Text("New Arrival"),
+                        style: OutlinedButton.styleFrom(
+                          primary: Colors.pink,
+                          backgroundColor: Colors.white,
+                          shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                          ),
+                          textStyle: TextStyle(fontSize: 12),
+                          shadowColor: Colors.grey,
+                          elevation: 5,
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-              ],
+                  Row(
+                    children: <Widget>[
+                      OutlinedButton.icon(
+                        onPressed: () {
+                          // Respond to button press
+                        },
+                        icon:
+                            Icon(Icons.thumb_up, color: Colors.pink, size: 18),
+                        label: Text("Best Seller"),
+                        style: OutlinedButton.styleFrom(
+                          primary: Colors.pink,
+                          backgroundColor: Colors.white,
+                          shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                          ),
+                          textStyle: TextStyle(fontSize: 12),
+                          shadowColor: Colors.grey,
+                          elevation: 5,
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ),
           ],
         ),
