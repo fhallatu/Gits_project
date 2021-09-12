@@ -1,3 +1,4 @@
+![SS Widget Project](https://user-images.githubusercontent.com/85818176/132554736-af67ea1c-db8d-4928-8dfd-0889025b136b.jpeg)
 # widget_project
 
 A new Flutter project.
